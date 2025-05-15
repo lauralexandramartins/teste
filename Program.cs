@@ -44,8 +44,14 @@
 List<string> Nomes = ["joao", "laura", "vitoria", "evandro"]; 
 new List<string> {"laura", "ana", "joana"}
 ;
-
-  
+///estou testando aqui, para ver se funciona
+/// 
+/// 
+/// 
+/// uee
+  public class abstract main{
+    
+  }
 
 }
 
