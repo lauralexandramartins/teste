@@ -1,7 +1,7 @@
 public class Aluno
 {
   public string Nome { get; set; } = "";
-    public string Curso { get; set; }
+  public string Curso { get; set; } = "";
 }
 
 public class Program
@@ -13,6 +13,7 @@ public class Program
     new Aluno { Nome = "Lucas", Curso = "Matemática" },
     new Aluno { Nome = "Júlia", Curso = "Física" },
     new Aluno { Nome = "Rafael", Curso = "Química" },
+    new Aluno { Nome = "Camila", Curso = "Matemática" },
     new Aluno { Nome = "Camila", Curso = "Matemática" }
 };
 
@@ -24,10 +25,11 @@ public class Program
     { "Camila", 20 }
 };
 
+
+
     var busca = from alu in alunos
                 join fre in frequencia on alu.Nome equals fre.Key
-                where alu.Nome == "A"
-                orderby alu.Nome
+                orderby alu.Nome, fre.Value
                 select new
                 {
                   Nome = alu.Nome,
@@ -39,7 +41,18 @@ public class Program
     {
       Console.WriteLine(item);
     }
+    List<int> number = new List<int> { 10, 5, 7, 20, 3, 8, 1, -1, -100 };
+    int r = number.Last(num => num < 50);
+    int g = number.Count();
+    Console.WriteLine(g);
+    var e = number.ToList();
+      {
+        
+      }
+      foreach (var item in e)
+    {    Console.WriteLine(item);
 
-   
+    }
+
   }
 }
